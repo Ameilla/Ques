@@ -1,0 +1,26 @@
+#include<stdio.h>
+main()
+{
+    int d1,d2,d3,d4,d5;
+    int n1,n2,n3,n4,n5;
+    int total;
+    printf("Enter the 1st Denomination: ");
+    scanf("%d",&d1);
+    printf("Enter the 1st Denomination number of notes: ");
+    scanf("%d",&n1);
+    printf("Enter the 2nd Denomination: ");
+    scanf("%d",&d2);
+    printf("Enter the 2nd Denomination number of notes: ");
+    scanf("%d",&n2);
+    printf("Enter the 3rd Denomination: ");
+    scanf("%d",&d3);
+    printf("Enter the 3rd Denomination number of notes: ");
+    scanf("%d",&n3);
+    printf("Enter the 4th Denomination: ");
+    scanf("%d",&d4);
+    printf("Enter the 4th Denomination number of notes: ");
+    scanf("%d",&n4);
+    total=((d1*n1)+(d2*n2)+(d3*n3)+(d4*n4));
+    printf("Total Available Balance in ATM: %d",total);
+
+}
