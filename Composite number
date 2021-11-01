@@ -1,0 +1,44 @@
+//a=Smaller  b=greater
+#include<stdio.h>
+main()
+{
+    int a,b,i,j,com;
+    printf("Enter the values of a and b ");
+    scanf("%d%d",&a,&b);
+    for(i=a;i<=b;i++)
+    {
+        com=0;
+        for(j=1;j<=b;j++)
+        {
+            if(i%j==0)
+                com++;
+        }
+        if(com>2)
+            printf("%d ",i);
+
+    }
+}
+
+
+
+
+//a=greater b=smaller
+#include<stdio.h>
+main()
+{
+    int a,b,i,j,com;
+    printf("Enter the values of a and b ");
+    scanf("%d%d",&a,&b);
+    for(i=a;i>=b;i--)
+    {
+        com=0;
+        for(j=a;j>=1;j--)
+        {
+            if(i%j==0)
+                com++;
+        }
+        if(com>2)
+            printf("%d ",i);
+
+    }
+}
