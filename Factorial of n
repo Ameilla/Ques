@@ -1,0 +1,12 @@
+#include<stdio.h>
+main()
+{
+    int n,mul=1,i;
+    printf("N = ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        mul*=i;
+    }
+    printf("%d Factorial = %d",n,mul);
+}
