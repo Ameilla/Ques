@@ -1,0 +1,65 @@
+
+#include<stdio.h>
+main()
+{
+    int a[10][10],b[10][10],mul[10][10];
+    int r,c,i,j,k;
+    printf("Enter the number of rows and columns ");
+    scanf("%d%d",&r,&c);
+    printf("Enter Mat1\n");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            printf("Enter a[%d][%d] ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter Mat2\n");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            printf("Enter b[%d][%d] ",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("Mat1 =  ");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n\t");
+    }
+    printf("\nMat2 =  ");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            printf("%d\t",b[i][j]);
+        }
+        printf("\n\t");
+    }
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            mul[i][j]=0;
+            for(k=1;k<=c;k++)
+            {
+                mul[i][j]=mul[i][j]+(a[i][k]*b[k][j]);
+            }
+        }
+    }
+    printf("\nMat Sum= ");
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            printf("%d\t",mul[i][j]);
+        }
+        printf("\n\t");
+    }
+}
