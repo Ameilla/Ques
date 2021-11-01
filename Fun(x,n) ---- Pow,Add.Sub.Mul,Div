@@ -1,0 +1,59 @@
+#include<stdio.h>
+    Pow(int x,int n)
+    {
+        int y=pow(x,n);
+        printf("Power = %d\n",y);
+    }
+    Add(int x,int n)
+    {
+        int y=x+n;
+        printf("Addition = %d\n",y);
+    }
+    Sub(int x,int n)
+    {
+        int y=x-n;
+        printf("Subtraction = %d\n",y);
+    }
+    Mul(int x,int n)
+    {
+        int y=x*n;
+        printf("Multiplication = %d\n",y);
+    }
+    Div(int x,int n)
+    {
+        float y=x/n;
+        printf("Divison = %.2f",y);
+    }
+
+main()
+{
+    int  choice;
+    printf("Enter the choice:");
+    scanf("%d",&choice);
+    int x,n;
+    printf("Enter the value of x:");
+    scanf("%d",&x);
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+    switch(choice)
+    {
+    case 1:
+        Pow(x,n);
+        break;
+    case 2:
+        Add(x,n);
+        break;
+    case 3:
+        Sub(x,n);
+        break;
+    case 4:
+        Mul(x,n);
+        break;
+    case 5:
+        Div(x,n);
+        break;
+    default:
+        printf("out of range");
+        break;
+    }
+}
