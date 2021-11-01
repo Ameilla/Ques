@@ -1,0 +1,25 @@
+#include<stdio.h>
+main()
+{
+    char sen_cit;
+    printf("Is customer senior citizen(y/n): ");
+    scanf("%c",&sen_cit);
+    int pri_amt,year,interest=0;
+    printf("Enter the principal amount: ");
+    scanf("%d",&pri_amt);
+    printf("Enter the no of years: ");
+    scanf("%d",&year);
+
+    if(sen_cit=='y'||sen_cit=='Y')
+    {
+        interest=(pri_amt*year*1.2)/100;
+        printf("%d",interest);
+    }
+    else if(sen_cit=='n'||sen_cit=='N')
+    {
+        interest=(pri_amt*year*10)/100;
+        printf("%d",interest);
+    }
+
+
+}
