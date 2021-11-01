@@ -1,0 +1,16 @@
+#include<stdio.h>
+main()
+{
+    char str1[100],str2[100];
+    int x;
+    gets(str1);
+    gets(str2);
+    x=strcmp(str1,str2);
+    //strcmp both are same is gives 0
+    //else 1
+    if(x==0)
+        printf("valid");
+    else
+        printf("invalid");
+
+}
