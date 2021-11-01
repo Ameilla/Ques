@@ -1,0 +1,26 @@
+#include<stdio.h>
+main()
+{
+    int income,tax;
+    printf("Enter the income: ");
+    scanf("%d",&income);
+    if(income<150000)
+    {
+        printf("No tax");
+    }
+    else if(income>150001&&income<300000)
+    {
+        tax=income*0.1;
+        printf("Tax= %d",tax);
+    }
+    else if(income>300001&&income<500000)
+    {
+        tax=income*0.2;
+        printf("Tax= %d",tax);
+    }
+    else if(income>500001)
+    {
+        tax=income*0.3;
+        printf("Tax= %d",tax);
+    }
+}
