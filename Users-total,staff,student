@@ -1,0 +1,15 @@
+#include<stdio.h>
+main()
+{
+    int total_users,staff_users,student_users;
+    printf("Enter the Total Users: ");
+    scanf("%d",&total_users);
+    printf("Enter the Staff Users: ");
+    scanf("%d",&staff_users);
+    int x;
+    x=staff_users/3;
+    staff_users=staff_users+x;
+    printf("%d",staff_users);
+    student_users=total_users-staff_users;
+    printf("Student Users: %d",student_users);
+}
