@@ -1,0 +1,25 @@
+#include<stdio.h>
+main()
+{
+    int a[6]={14,67,48,23,5,62};
+    int i,j,temp;
+    for(i=0;i<6;i++)
+    {
+        for(j=i+1;j<6;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<6;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    int n;
+    scanf("%d",&n);
+    printf(" %d Largest number: %d",n,a[n]);
+}
