@@ -1,0 +1,21 @@
+
+#include<stdio.h>
+main()
+{
+    int vowels=0,count=0;
+    char str[100],c;
+    printf("Enter the string: ");
+    scanf("%s",&str);
+    while(str[count]!='\0')
+    {
+        c=str[count];
+         if(c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I'|| c == 'o' || c == 'O' || c == 'u' || c == 'U')
+         {
+             vowels++;
+             printf("%c",c);
+         }
+         count++;
+    }
+    printf("\n");
+    printf("Number of vowels=%d",vowels);
+}
