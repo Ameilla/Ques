@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+    char str[100];
+    int i,alp=0,dig=0,spe=0,x;
+    gets(str);
+    x=strlen(str);
+    for(i=0;i<=x;i++)
+    {
+        if((str[i]>=65 && str[i]<=90)|| (str[i]>=97 && str[i]<=122) )
+          alp++;
+        else if(str[i]>=48 && str[i]<=57)
+         dig++;
+        else if(str[i]=='!'||str[i]=='!'||str[i]=='@'||str[i]=='#'||str[i]=='$'||str[i]=='%'||str[i]=='^'||str[i]=='&'||str[i]=='*')
+         spe++;
+    }
+    printf("Alphabets= %d\n",alp);
+    printf("Digits= %d\n",dig);
+    printf("Special Characters= %d",spe);
+}
