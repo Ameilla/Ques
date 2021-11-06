@@ -1,0 +1,70 @@
+#include<stdio.h>
+Odd(int n)
+{
+    int i,mean=0;
+    for(i=1;i<=n;i++)
+    {
+       if(i%2!=0)
+       {
+           mean=mean+i;
+       }
+    }
+    printf("%d",mean);
+}
+Even(int n)
+{
+    int i,mean=0;
+    for(i=1;i<=n;i++)
+    {
+        if(i%2==0)
+        {
+            mean=mean+i;
+        }
+    }
+    printf("\n%d",mean);
+}
+Square(int n)
+{
+    int i,mean=0;
+    for(i=1;i<=n;i++)
+    {
+        mean=mean+(i*i);
+    }
+    printf("\n%d",mean);
+}
+Cube(int n)
+{
+    int i,mean=0;
+    for(i=1;i<=n;i++)
+    {
+        mean=mean+(i*i*i);
+    }
+    printf("\n%d",mean);
+}
+main()
+{
+    int N,Case;
+    printf("Enter N value : ");
+    scanf("%d",&N);
+    printf("Case: ");
+    scanf("%d",&Case);
+    switch(Case)
+    {
+    case 1:
+        Odd(N);
+        break;
+    case 2:
+        Even(N);
+        break;
+    case 3:
+        Square(N);
+        break;
+    case 4:
+        Cube(N);
+        break;
+    default:
+        printf("Invalid case");
+    }
+
+
+}
