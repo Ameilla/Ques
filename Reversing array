@@ -1,0 +1,11 @@
+#include<stdio.h>
+main()
+{
+    int arr[7]={16,18,27,16,23,21,19};
+    int i;
+
+    for(i=6;i>=0;i--)
+    {
+        printf("%d ",arr[i]);
+    }
+}
