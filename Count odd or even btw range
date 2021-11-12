@@ -1,0 +1,23 @@
+#include<stdio.h>
+main()
+{
+    int m,n,i;
+    int odd=0,even;
+    scanf("%d%d",&m,&n);
+    for(i=m+1;i<n;i++)
+    {
+        if(i%2!=0)
+        {
+            odd++;
+        }
+    }
+    printf("Number of Odd Numbers = %d",odd);
+    for(i=m+1;i<n;i++)
+    {
+        if(i%2==0)
+        {
+            even++;
+        }
+    }
+    printf("\nNumber of Even Numbers = %d",even);
+}
