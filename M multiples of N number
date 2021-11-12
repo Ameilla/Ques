@@ -1,0 +1,15 @@
+
+#include<stdio.h>
+main()
+{
+    int m,n,i;
+    printf("M = ");
+    scanf("%d",&m);
+    printf("N = ");
+    scanf("%d",&n);
+    printf("%d multiples of %d: ",m,n);
+    for(i=1;i<=m;i++)
+    {
+        printf("%d ",i*n);
+    }
+}
