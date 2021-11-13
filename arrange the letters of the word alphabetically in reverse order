@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+    char ch[10],a[10];
+    printf("Enter the word: ");
+    gets(ch);
+    int n;
+    n=strlen(ch);
+    int i,k=0,j;
+    for(i=n;i>=0;i--)
+    {
+        a[k]=ch[i];
+        k++;
+    }
+    char temp;
+    for(i=1;i<=k;i++)
+    {
+        for(j=1;j<=k;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=1;i<=k;i++)
+    {
+        printf("%c ",a[i]);
+    }
+}
