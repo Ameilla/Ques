@@ -1,0 +1,103 @@
+#include<stdio.h>
+main()
+{
+    char C;
+    printf("Enter the choice(A/D/B):");
+    scanf("%c",&C);
+    int n,a[100],k=0,rem=0,i,j,temp;
+
+    printf("Enter the number:");
+    scanf("%d",&n);
+
+    while(n>0)
+    {
+        rem=n%10;
+        a[k]=rem;
+        k++;
+        n=n/10;
+    }
+    switch(C)
+    {
+        case 'A':
+        {
+            printf("Ascending Order: ");
+            for(i=0;i<k;i++)
+            {
+                for(j=i+1;j<k;j++)
+                {
+                    if(a[i]>a[j])
+                    {
+                        temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+                }
+            }
+            for(i=0;i<k;i++)
+            {
+                printf("%d ",a[i]);
+            }
+        }
+        break;
+        case 'D':
+            {
+                printf("\nDecending Order: ");
+                for(i=0;i<k;i++)
+                {
+                    for(j=i+1;j<k;j++)
+                    {
+                        if(a[i]<a[j])
+                        {
+                            temp=a[i];
+                            a[i]=a[j];
+                            a[j]=temp;
+                        }
+                    }
+                }
+                for(i=0;i<k;i++)
+                {
+                    printf("%d ",a[i]);
+                }
+            }
+            break;
+        case 'B':
+            {
+                printf("Ascending Order: ");
+                for(i=0;i<k;i++)
+                {
+                    for(j=i+1;j<k;j++)
+                    {
+                        if(a[i]>a[j])
+                        {
+                            temp=a[i];
+                            a[i]=a[j];
+                            a[j]=temp;
+                        }
+                    }
+                }
+                for(i=0;i<k;i++)
+                {
+                    printf("%d ",a[i]);
+                }
+
+
+                printf("\nDecending Order: ");
+                for(i=0;i<k;i++)
+                {
+                    for(j=i+1;j<k;j++)
+                    {
+                        if(a[i]<a[j])
+                        {
+                            temp=a[i];
+                            a[i]=a[j];
+                            a[j]=temp;
+                        }
+                    }
+                }
+                for(i=0;i<k;i++)
+                {
+                    printf("%d ",a[i]);
+                }
+            }
+    }
+}
