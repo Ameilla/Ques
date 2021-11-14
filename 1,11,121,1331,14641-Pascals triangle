@@ -1,0 +1,23 @@
+#include<stdio.h>
+main()
+{
+    int n;
+    scanf("%d",&n);
+    int i,sp,j,pri=1;
+    for(i=0;i<n;i++)
+    {
+        for(sp=1;sp<=n-i;sp++)
+        {
+            printf("  ");
+        }
+        for(j=0;j<=i;j++)
+        {
+            if(j==0||i==0)
+                pri=1;
+            else
+                pri=pri*(i-j+1)/j;
+            printf("%4d",pri);
+        }
+        printf("\n");
+    }
+}
