@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+
+    int py,c,mat,phy,total;
+    float agg;
+    printf("Enter the marks in python: ");
+    scanf("%d",&py);
+    printf("Enter the marks in c programming: ");
+    scanf("%d",&c);
+    printf("Enter the marks in Mathematics: ");
+    scanf("%d",&mat);
+    printf("Enter the marks in Physics: ");
+    scanf("%d",&phy);
+    total=py+c+mat+phy;
+    float i;
+    i=total;
+    printf("Total= %d",total);
+    agg=(i/400)*100;
+    printf("\nAggregate= %.1f\n",agg);
+    if(agg>75)
+        printf("DISTINCTION");
+    else if(agg>=60 && agg<75)
+        printf("FIRST DIVISION");
+    else if(agg>=50 && agg<60)
+        printf("SECOND DIVISION");
+    else if(agg>=40 && agg<60)
+        printf("THIRD DIVISION");
+    else
+        printf("FAIL");
+}
