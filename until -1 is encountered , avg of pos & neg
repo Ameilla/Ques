@@ -1,0 +1,40 @@
+#include<stdio.h>
+main()
+{
+    int n,x[100];
+    printf("Enter -1 to exit....\n");
+    int k=0;
+    while(n!=-1)
+    {
+        printf("Enter the number: ");
+        scanf("%d",&n);
+        x[k]=n;
+        k++;
+    }
+    int i,pos=0,neg=0,po=0,ne=0;
+    for(i=0;i<k;i++)
+    {
+        if(x[i]>0)
+        {
+            pos=pos+x[i];
+            po++;
+        }
+    }
+    float positive;
+    float z,y;
+    z=pos,y=po;
+    positive=z/y;
+    printf("Positive = %f\n",positive);
+    for(i=0;i<k;i++)
+    {
+        if(x[i]<-1)
+        {
+            neg=neg+x[i];
+            ne++;
+        }
+    }
+    float negative,a,b;
+    a=neg,b=ne;
+    negative=a/b;
+    printf("Negative = %f",negative);
+}
