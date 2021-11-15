@@ -1,0 +1,62 @@
+#include<stdio.h>
+main()
+{
+    char ch;
+    printf("Enter your choice  Order(A/D):" );
+    scanf("%c",&ch);
+    int n,i,j;
+    char str[100][100],temp[100];
+    printf("Enter number of names: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%s",&str[i]);
+    }
+    switch(ch)
+    {
+    case 'A': case 'a':
+        {
+            for(i=1;i<=n;i++)
+            {
+            for(j=i+1;j<=n;j++)
+                {
+                if(strcmp(str[i],str[j])>0)
+                {
+                strcpy(temp,str[i]);
+                strcpy(str[i],str[j]);
+                strcpy(str[j],temp);
+                }
+                }
+            }
+            for(i=1;i<=n;i++)
+            {
+                printf("\n%s",str[i]);
+            }
+            break;
+        }
+    case 'D': case 'd':
+        {
+            for(i=1;i<=n;i++)
+            {
+                for(j=i+1;j<=n;j++)
+                {
+                    if(strcmp(str[i],str[j])<0)
+                    {
+                        strcpy(temp,str[i]);
+                        strcpy(str[i],str[j]);
+                        strcpy(str[j],temp);
+                    }
+                }
+            }
+            for(i=1;i<=n;i++)
+            {
+                printf("\n%s",str[i]);
+            }
+            break;
+        }
+    default:
+        printf("Invalid choice");
+    }
+}
+
+
