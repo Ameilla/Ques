@@ -1,0 +1,58 @@
+#include<stdio.h>
+
+void str()
+{
+    char a[100],b[100];
+    printf("Enter the string: ");
+    scanf("%s",&a);
+    strcpy(b,a);
+    strrev(b);
+    if(strcmp(a,b)==0)
+    {
+        printf("%s is a palindrome",a);
+    }
+    else
+    {
+        printf("%s is not a palindrome",a);
+    }
+}
+
+void num()
+{
+    int n;
+    printf("Enter the number ");
+    scanf("%d",&n);
+    int i,num,rev=0;
+    num=n;
+    while(n!=0)
+    {
+        rev=rev*10+(n%10);
+        n=n/10;
+    }
+    if(num==rev)
+    {
+        printf("%d is palindrome",num);
+    }
+    else
+    {
+        printf("%d is not palindrome",num);
+    }
+}
+
+main()
+{
+    int n;
+    printf("Case = ");
+    scanf("%d",&n);
+    switch(n)
+    {
+    case 1:
+        str();
+        break;
+    case 2:
+        num();
+        break;
+    default:
+        printf("Invalid case");
+    }
+}
