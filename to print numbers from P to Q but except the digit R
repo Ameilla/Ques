@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+    int p,q,r,a,arr[100],i;
+    printf("P = ");
+    scanf("%d",&p);
+    printf("Q = ");
+    scanf("%d",&q);
+    printf("R = ");
+    scanf("%d",&r);
+    int k=0,j;
+    for(i=p;i<=q;i++)
+    {
+        printf("%d ",i);
+        arr[k]=i;
+        k++;
+    }
+    for(j=r-1;j<=k-1;j++)
+    {
+        arr[j]=arr[j+1];
+    }
+    k--;
+
+    printf("\nNumber are= ");
+    for(j=0;j<k;j++)
+    {
+        printf("%d ",arr[j]);
+    }
+}
