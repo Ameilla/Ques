@@ -1,0 +1,55 @@
+#include<stdio.h>
+main()
+{
+    int i,j,len,count=0;
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    len=strlen(str);
+    printf("Repeated letters are ");
+    for(i=0;i<len;i++)
+    {
+        for(j=i+1;j<len;j++)
+        {
+            if(str[i]==str[j])
+            {
+                printf("%c ",str[i]);
+                count++;
+            }
+        }
+    }
+    printf("\nNumber of repeated letters = %d",count);
+}
+
+
+
+
+
+#include<stdio.h>
+main()
+{
+    int i,j,len,count=0,v=1;
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    len=strlen(str);
+    printf("Repeated letters are ");
+    for(i=0;i<len;i++)
+    {
+        for(j=i+1;j<len;j++)
+        {
+            if(str[i]==str[j])
+            {
+                if(v==1 && str[j]!='\0')
+                {
+                printf("%c ",str[i]);
+                count++;
+                }
+                str[j]='\0';
+                v++;
+            }
+        }
+        v=1;
+    }
+    printf("\nNumber of repeated letters = %d",count);
+}
